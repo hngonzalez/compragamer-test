@@ -1,0 +1,9 @@
+<main>
+    <section class="content-container">
+       <categories-list *ngIf="(categories$ | async) as categories; else loading"
+        [categories]="categories"></categories-list>
+        <ng-template #loading>
+            Data cargando
+        </ng-template>
+    </section>
+</main>

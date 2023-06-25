@@ -1,0 +1,33 @@
+mat-toolbar {
+    background-color: #010A10;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-tabs {
+    display: flex;
+    gap: 16px;
+    
+    a {
+        text-decoration: none;
+        color: white;
+        font-size: 16px;
+        line-height: 1.2;
+        letter-spacing: .2em;
+        text-transform: uppercase;
+        font-weight: 600;
+        -webkit-transition: all .1s ease-in-out;
+        -moz-transition: all .1s ease-in-out;
+        -ms-transition: all .1s ease-in-out;
+        -o-transition: all .1s ease-in-out;
+        transition: all .1s ease-in-out;
+
+        &:hover {
+            color: rgb(179, 16, 16);
+        }
+    }
+}
+
+mat-icon {
+    color: white;
+}
