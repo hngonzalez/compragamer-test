@@ -1,0 +1,7 @@
+<mat-card  class="example-card"
+    [routerLink]="['/products/', subcategory.id]">
+    <mat-card-header>
+        <mat-card-title> {{subcategory.nombre}} </mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="https://compragamer.net/categorias_demo/{{subcategory.imagen}}">
+</mat-card>

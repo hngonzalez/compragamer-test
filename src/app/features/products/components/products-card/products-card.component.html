@@ -1,0 +1,20 @@
+<mat-card  class="example-card">
+    <img mat-card-image src="https://compragamer.net/pga/imagenes_publicadas/compragamer_Imganen_general_{{product.imagenes[0].nombre}}-med.jpg" alt="Photo of a Shiba Inu">
+    <mat-card-header>
+        <mat-card-title> {{product.nombre}} </mat-card-title>
+    </mat-card-header>
+    <mat-card-header>
+        <mat-card-subtitle>stock: {{product.stock}}</mat-card-subtitle>
+        <h1> {{product.precio | currency}} </h1>
+    </mat-card-header>
+    <div class="confirm" [ngClass]="{'added': productAdded}">
+        <label> <span class="material-icons md-18">check</span> Agregado </label>
+    </div>
+    <div class="actions">
+        <button class="btn-add" mat-flat-button color="primary"
+            (click)="addToCart(product)"> 
+            <span class="material-icons md-18">shopping_cart</span> 
+            AGREGAR
+        </button>
+    </div>
+</mat-card>

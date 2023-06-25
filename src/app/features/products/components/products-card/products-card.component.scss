@@ -1,0 +1,70 @@
+mat-card-header {
+    display: flex;
+}
+
+mat-card-header {
+    display: flex;
+    flex-direction: column;
+}
+
+mat-card-title {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+mat-card-subtitle {
+    font-size: 12px;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.example-card {
+    max-width: 250px;
+
+    border-radius: 14px 14px 14px 14px;
+
+    img {
+        padding: 16px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+}
+
+div.actions {
+    margin-top: auto;
+
+    .btn-add {
+        width: 100%;
+        border-radius: 0 0 14px 14px ;
+        background-color: #C10206;
+    }
+}
+
+
+.confirm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: green;
+    font-weight: bold;
+    opacity: 0;
+    -webkit-transition: all .1s ease-in-out;
+    -moz-transition: all .1s ease-in-out;
+    -ms-transition: all .1s ease-in-out;
+    -o-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out;
+
+    label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.added {
+    opacity: 1;
+}

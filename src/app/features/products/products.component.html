@@ -1,0 +1,5 @@
+<products-list *ngIf="(products$ | async) as products; else loading"
+    [products]="products"></products-list>
+<ng-template #loading>
+    Data cargando
+</ng-template>
