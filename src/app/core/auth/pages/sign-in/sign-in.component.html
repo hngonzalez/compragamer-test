@@ -1,1 +1,22 @@
-<p>sign-in works!</p>
+<main>
+    <div class="register_container">
+        <form [formGroup]="signInForm" #signInNgForm="ngForm">
+            <div class="form_group">
+                <label for="">Email</label>
+                <input type="email"
+                    formControlName="email">
+                <small class="danger" *ngIf="signInForm.controls['email'].touched && signInForm.controls['email'].invalid"> Debe ingresar un email válido </small>
+            </div>
+            <div class="form_group">
+                <label for="">Contraseña</label>
+                <input type="password"
+                    formControlName="password">
+                <small class="danger" *ngIf="signInForm.controls['password'].touched && signInForm.controls['password'].invalid"> Debe ingresar un pa válido </small>
+            </div>
+            <div class="actions">
+                <button mat-flat-button [disabled]="signInForm.invalid" color="primary" (click)="signIn()">LOGIN</button>
+                <h4 *ngIf="loggedUser" class="confirm">Usuario logueado</h4>
+            </div>
+        </form>
+    </div>
+</main>

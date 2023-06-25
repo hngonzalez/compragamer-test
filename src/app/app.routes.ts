@@ -9,9 +9,10 @@ export const routes: Routes = [
         path: '',
         /* canActivate: [NoAuthGuard],
         canActivateChild: [NoAuthGuard], */
+        component: DashboardComponent,
         children: [ 
-            /* {path: 'sign-in', loadChildren: () => import('./core/auth/sign-in/sign-in.routes')},
-            {path: 'sign-up', loadChildren: () => import('./core/auth/sign-up/sign-up.routes')}  */
+            {path: 'login', loadChildren: () => import('./core/auth/pages/sign-in/sign-in.routes')},
+            {path: 'registrarse', loadChildren: () => import('./core/auth/pages/sign-up/sign-up.routes')} 
         ]
     }, 
     

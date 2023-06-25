@@ -1,0 +1,49 @@
+<main>
+    <div class="register_container">
+        <form [formGroup]="signUpForm" #signUpNgForm="ngForm">
+            <div class="form_group">
+                <label for="">Nombre</label>
+                <input type="text"
+                    formControlName="name">
+                <small class="danger" *ngIf="signUpForm.controls['name'].touched && signUpForm.controls['name'].invalid"> Debe ingresar un Nombre válido </small>
+            </div>
+            <div class="form_group">
+                <label for="">Apellido</label>
+                <input type="text"
+                    formControlName="lastname">
+                <small class="danger" *ngIf="signUpForm.controls['lastname'].touched && signUpForm.controls['lastname'].invalid"> Debe ingresar un Apellido válido </small>
+            </div>
+            <div class="form_group">
+                <label for="">DNI</label>
+                <input type="text"
+                    formControlName="dni">
+                <small class="danger" *ngIf="signUpForm.controls['dni'].touched && signUpForm.controls['dni'].invalid"> Debe ingresar un dni válido </small>
+            </div>
+            <div class="form_group">
+                <label for="">Email</label>
+                <input type="email"
+                    formControlName="email">
+                <small class="danger" *ngIf="signUpForm.controls['email'].touched && signUpForm.controls['email'].invalid"> Debe ingresar un email válido </small>
+            </div>
+            <div class="form_group">
+                <label for="">Contraseña</label>
+                <input type="password"
+                    formControlName="password">
+                <small class="danger" *ngIf="signUpForm.controls['password'].touched && signUpForm.controls['password'].invalid"> Debe ingresar un pa válido </small>
+            </div>
+            <div class="form_group">
+                <label for="">Teléfono</label>
+                <input type="text"
+                    formControlName="cellphone_number">
+                <small class="danger" *ngIf="signUpForm.controls['cellphone_number'].touched && signUpForm.controls['cellphone_number'].invalid"> Debe ingresar un Numero válido </small>
+            </div>
+            <div class="actions">
+                <button mat-flat-button [disabled]="signUpForm.invalid" color="primary" (click)="signUp()">REGISTRARSE</button>
+                <h4 *ngIf="errorLogin" class="danger">Revise los datos ingresados</h4>
+            </div>
+            <div class="confirm">
+                <h4 *ngIf="addedUser" class="">Usuario en localstorage!</h4>
+            </div>
+        </form>
+    </div>
+</main>
